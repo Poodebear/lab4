@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - /var/log/suricata/eve.json
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+  username: "elastic"
+  password: "changeme"  # Adjust this if needed
+
+setup.kibana:
+  host: "localhost:5601"
